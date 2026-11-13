@@ -80,36 +80,6 @@ New players get a short tutorial on their first run, plus tips the first time so
 
 ---
 
-## Build from source
-
-You need the **.NET 8 SDK**. Visual Studio 2022 with the **.NET desktop development** workload includes it, or install it on its own:
-
-```
-winget install Microsoft.DotNet.SDK.8
-```
-
-Then, in the repo folder:
-
-**Play from Visual Studio:** open `VoidLance.sln` and press **F5**.
-
-**Build and run from a terminal:**
-
-```
-dotnet run -c Release
-```
-
-**Make a single standalone `.exe`:**
-
-```
-dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:EnableCompressionInSingleFile=true
-```
-
-The `.exe` lands in `bin\Release\net8.0-windows\win-x64\publish\`. It runs on any 64-bit Windows PC without .NET installed.
-
-The source uses two-letter file names. [`src/README.md`](src/README.md) decodes every file.
-
----
-
 ## License
 
 MIT, copyright (c) 2026 Fastest. See [LICENSE](LICENSE).
